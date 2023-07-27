@@ -8,3 +8,29 @@
   overflow: hidden;
   mask-image: linear-gradient(180deg, #000 60%, transparent);
 }
+.homeText {
+  color: white;
+  font-weight: bold;
+}
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-button-secondary {
+  background-color: #6c757d;
+}
+
+.custom-button-secondary:hover {
+  background-color: #4e5458;
+}

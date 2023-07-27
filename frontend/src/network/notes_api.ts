@@ -37,7 +37,7 @@ export interface SignUpCredentials {
 }
 
 export async function signUp(credentials: SignUpCredentials): Promise<User> {
-  const response = await fetchData('/api/user/signup', {
+  const response = await fetchData('/api/users/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export async function login(credentials: LoginCredentials): Promise<User> {
 }
 
 export async function logout() {
-  await fetchData('/api/user/logout', { method: 'POST' })
+  await fetchData('/api/users/logout', { method: 'POST' })
 }
 
 export async function fetchNotes(): Promise<Note[]> {

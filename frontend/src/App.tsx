@@ -13,6 +13,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NotesPage from './components/pages/NotesPage'
 import PrivacyPage from './components/pages/PrivacyPage'
 import NotFoundPage from './components/pages/NotFoundPage'
+import homeImg from './images/home.jpg'
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState<User | null>(null)
@@ -33,7 +34,7 @@ function App() {
   })
   return (
     <BrowserRouter>
-      <div>
+      <div className={styles.Page}>
         <NavBar
           loggedInUser={loggedInUser}
           onLoginClicked={() => setShowLoginModal(true)}
