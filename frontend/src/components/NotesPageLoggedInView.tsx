@@ -6,6 +6,7 @@ import * as NotesApi from '../network/notes_api'
 import styles from '../styles/NotesPage.module.css'
 import styleUtils from '../styles/utils.module.css'
 import AddEditNoteDialog from './AddEditNoteDialog'
+import Buttonstyles from '../styles/Node.module.css'
 import Note from './Note'
 
 const NotesPageLoggedInView = () => {
