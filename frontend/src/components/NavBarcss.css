@@ -1,0 +1,59 @@
+.cool-navbar-container {
+  overflow: auto;
+}
+.cool-navbar {
+  background-color: black;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Create a shimmer effect animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Apply the shimmer effect to the navbar */
+.cool-navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+  z-index: -1;
+}
+.cool-navbar .nav-link {
+  transition: color 0.2s, background-color 0.2s;
+}
+.cool-navbar .nav-link:hover {
+  color: #f8f8f8;
+  background-color: transparent;
+}
+
+.cool-navbar .logout-button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.cool-navbar .logout-button:hover {
+  background-color: #81a1bc;
+}

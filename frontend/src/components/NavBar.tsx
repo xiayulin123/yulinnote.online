@@ -3,6 +3,7 @@ import { User } from '../models/user'
 import NavBarLoggedInView from './NavBarLoggedInView'
 import NavBarLoggedOutView from './NavBarLoggedOutView'
 import { Link } from 'react-router-dom'
+import './NavBarcss.css'
 
 interface NavBarProps {
   loggedInUser: User | null
@@ -18,10 +19,16 @@ const NavBar = ({
   onLogoutSuccessful,
 }: NavBarProps) => {
   return (
-    <Navbar bg="primary" variant="dark" expand="sm" sticky="top">
+    <Navbar
+      // bg="primary"
+      style={{ width: '100%', overflow: 'hidden' }}
+      variant="dark"
+      expand="sm"
+      sticky="top"
+      className="cool-navbar">
       <Container>
-        <Navbar.Brand as={Link} to="/">
-          Cool Notes App
+        <Navbar.Brand as={Link} to="/" style={{ fontWeight: 'bold' }}>
+          Create Your Notes
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar">

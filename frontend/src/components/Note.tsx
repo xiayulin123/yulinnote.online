@@ -5,6 +5,7 @@ import { Note as NoteModel } from '../models/note'
 import { Card } from 'react-bootstrap'
 import { formatDate } from '../utils/formatDate'
 import { MdDelete } from 'react-icons/md'
+import noteBack2 from '../images/note2.jpg'
 interface NotePrps {
   note: NoteModel
   onNoteClicked: (note: NoteModel) => void
@@ -30,9 +31,22 @@ const Note = ({
   return (
     <Card
       className={`${styles.noteCard} ${className}`}
-      onClick={() => onNoteClicked(note)}>
+      onClick={() => onNoteClicked(note)}
+      style={{
+        width: '375px',
+        height: '175px',
+
+        backgroundImage: `url(${noteBack2})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'right',
+        boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+        borderRadius: '10px',
+      }}>
       <Card.Body className={styles.cardBody}>
-        <Card.Title className={styleUtils.flexCenter}>
+        <Card.Title
+          className={styleUtils.flexCenter}
+          style={{ fontWeight: 'bold' }}>
           {title}
           <MdDelete
             className="text-muted ms-auto"
@@ -42,10 +56,14 @@ const Note = ({
             }}
           />
         </Card.Title>
-        <Card.Text className={styles.cardText}>{text}</Card.Text>
+        <Card.Text className={styles.cardText} style={{ fontWeight: 'bold' }}>
+          {text}
+        </Card.Text>
       </Card.Body>
 
-      <Card.Footer className="text-muted">{createdUpdatedText}</Card.Footer>
+      <Card.Footer className="text-muted" style={{ fontWeight: 'bold' }}>
+        {createdUpdatedText}
+      </Card.Footer>
     </Card>
   )
 }

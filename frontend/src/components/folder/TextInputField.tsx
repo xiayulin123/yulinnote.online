@@ -21,11 +21,14 @@ const TextInputField = ({
 }: TextInputFieldProps) => {
   return (
     <Form.Group className="mb-3" controlId={name + '-input'}>
-      <Form.Label> {label}</Form.Label>
+      <Form.Label>
+        <strong>{label}</strong>
+      </Form.Label>
       <Form.Control
         {...props}
         {...register(name, registerOptions)}
         isInvalid={!!error}
+        className="bold-text"
       />
       <Form.Control.Feedback type="invalid">
         {error?.message}

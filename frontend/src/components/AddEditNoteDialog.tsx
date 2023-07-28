@@ -5,6 +5,7 @@ import { NoteInput } from '../network/notes_api'
 import { useForm } from 'react-hook-form'
 import * as NotesApi from '../network/notes_api'
 import TextInputField from './folder/TextInputField'
+import note1 from '../images/note1.jpg'
 interface AddEditNoteDialogProps {
   noteToEdit?: Note
   onDismiss: () => void
@@ -43,10 +44,20 @@ const AddEditNoteDialog = ({
   }
   return (
     <Modal show onHide={onDismiss}>
-      <Modal.Header closeButton>
-        <Modal.Title>{noteToEdit ? 'Edit note' : 'Add note'}</Modal.Title>
+      <Modal.Header
+        closeButton
+        style={{
+          backgroundColor: '#81a1bc',
+          borderColor: '#81a1bc',
+        }}>
+        <Modal.Title style={{ fontWeight: 'bold' }}>
+          {noteToEdit ? 'Edit note' : 'Add note'}
+        </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body
+        style={{
+          backgroundColor: '#81a1bc',
+        }}>
         <Form id="addEditNoteForm" onSubmit={handleSubmit(onSubmit)}>
           <TextInputField
             name="title"
@@ -67,8 +78,13 @@ const AddEditNoteDialog = ({
           />
         </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <Button type="submit" form="addEditNoteForm" disabled={isSubmitting}>
+      <Modal.Footer
+        style={{ backgroundColor: '#81a1bc', borderColor: '#81a1bc' }}>
+        <Button
+          type="submit"
+          form="addEditNoteForm"
+          disabled={isSubmitting}
+          style={{ backgroundColor: '#81b1ac', borderColor: '#81b1ac' }}>
           save
         </Button>
       </Modal.Footer>

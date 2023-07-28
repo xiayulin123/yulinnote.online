@@ -2,8 +2,13 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
-
+.blockCenter:hover {
+  background-color: #4e5458;
+  border-color: #4e5458;
+}
 .flexCenter {
   display: flex;
   align-items: center;
@@ -13,4 +18,20 @@
 
 .width100 {
   width: 100%;
+}
+.changeLayout {
+  display: block;
+
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.changeLayout:hover {
+  background-color: #4e5458;
+  border-color: #4e5458;
+}
+.flexLeft {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
 }
