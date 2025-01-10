@@ -10,7 +10,7 @@
 
 ## 🌐 Project Introduction
 
-Welcome to www.yulinnote.online, a cutting-edge notes platform built on a secure and scalable Oracle Cloud infrastructure. Our meticulously crafted front-end and back-end components ensure an optimal user experience, making note-taking seamless and efficient.
+Welcome to www.yulinnote.online (this domain name has expired), a cutting-edge notes platform built on a secure and scalable Oracle Cloud infrastructure. Our meticulously crafted front-end and back-end components ensure an optimal user experience, making note-taking seamless and efficient.
 
 ## 📝 Key Features
 
