@@ -12,6 +12,8 @@
 
 Welcome to www.yulinnote.online (this domain name has expired), a cutting-edge notes platform built on a secure and scalable Oracle Cloud infrastructure. Our meticulously crafted front-end and back-end components ensure an optimal user experience, making note-taking seamless and efficient.
 
+![Yulinnote](https://github.com/user-attachments/assets/0abb9f04-f50c-4caf-b90b-9219766a22fe)
+
 ## 📝 Key Features
 
 - Secure Note Storage: Leveraging MongoDB integration, our platform offers efficient and secure note storage, enhancing overall performance.
